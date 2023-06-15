@@ -1,0 +1,412 @@
+exp : 01
+public class Pattern
+{
+    public static void main(String args[])
+    {
+        int i,j,k,l;
+        for(i=0;i<7;i++)
+        {
+            for(j=7;j>i;j--)
+            {
+                System.out.print(" ");
+            }
+            for(k=65;k<=65+i;k++)
+            {
+                System.out.print((char)(k));
+            }
+            for(l=k-1;l>65;l--)
+            {
+                System.out.print((char)(l-1));
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+exp : 02
+import java.util.Scanner;
+class InputOutput
+{
+  public static void main(String[] args)
+  {
+    int age;
+    String name;
+    Scanner s=new Scanner(System.in);
+    System.out.println("Enter Your Name");
+    name=s.next();
+    System.out.println("Enter your Age");
+    age=s.nextInt();
+    System.out.println("Your name is :"+name);
+    System.out.println("Your Age is :"+age);
+  }
+}
+
+
+exp : 03
+import java.util.Scanner;
+public class Rectangle 
+{
+ int length,bredth;
+ public void  setlength(int a)
+ {
+    if((a>0)&&(a<=20))
+    length=a;
+ }
+ public void  setbredth(int a)
+ {
+    if((a>0)&&(a<=20))
+    bredth=a;
+ }
+ public int getlength()
+ {
+    return length;
+ }
+ public int getbredth()
+ {
+    return bredth;
+ }
+ public static void main(String[] args)
+ {
+    int a,b,perimeter,area;
+    Scanner s = new Scanner(System.in);
+    System.out.println("Enter the length and bredthof the rectangle");
+    a=s.nextInt();
+    b=s.nextInt();
+    Rectangle  r= new Rectangle();
+    r.setlength(a);
+    r.setbredth(b);
+    perimeter=2*(r.getlength()+r.getbredth());
+    area=(r.getlength()*r.getbredth());
+    System.out.println("The Perimeter of the rectangle is :"+perimeter);
+    System.out.println("The Area of the rectangle is :"+area);
+ }   
+}
+
+
+exp : 04
+import java.util.Scanner;
+public class Constructor 
+{
+    int m;
+    String n;
+public Constructor(int m,String n)
+{
+this.m=m;
+this.n=n;
+}
+public void setm(int m)
+{
+    this.m=m;
+}
+public void setn(String n)
+{
+    this.n=n;
+}
+public int getm()
+{
+return m;
+}
+public String getn()
+{
+return n;
+}
+public Constructor(Constructor c)
+{
+this(c.getm(),c.getn());
+}    
+public static void main(String[] args)
+{
+    int a;
+    String b;
+    Scanner s = new Scanner(System.in);
+    System.out.println("Enter the value of a and b");
+    a=s.nextInt();
+    b=s.next();
+  Constructor c1 = new Constructor(a,b);
+  Constructor c2 = new Constructor(c1);
+  c2.setn("Sandesh");
+  System.out.println(c1.getm()); 
+  System.out.println(c1.getn());
+  System.out.println(c2.getm());
+  System.out.println(c2.getn());
+}
+}
+
+exp : 05
+
+import java.util.Scanner;
+public class Trigo
+{
+
+    public double sin(int degree)
+    {
+        double s;
+        s=Math.sin(Math.toRadians(degree));
+        return s;
+    }
+    public double cos(int degree)
+    {
+        double s;
+        s=Math.cos(Math.toRadians(degree));
+        return s;
+    }
+    public double tan(int degree)
+    {
+        double s;
+        s=Math.tan(Math.toRadians(degree));
+        return s;
+    }
+
+    public double cosec(int degree)
+    {
+        double s;
+        s=Math.sin(Math.toRadians(degree));
+        s=1/s;
+        return s;
+    }
+    public double sec(int degree)
+    {
+        double s;
+        s=Math.cos(Math.toRadians(degree));
+        s=1/s;
+        return s;
+    }
+    public double cot(int degree)
+    {
+        double s;
+        s=Math.tan(Math.toRadians(degree));
+        s=1/s;
+        return s;
+    }
+    public static void main(String[] args)
+    {
+        int degree;
+        Scanner s = new Scanner(System.in);
+        Trigo t=new Trigo();
+        System.out.println("Enter the value of angle in degrees\n");
+        degree=s.nextInt();
+        double si,co,ta,cs,se,ct;
+        si=t.sin(degree);
+        co=t.cos(degree);
+        ta=t.tan(degree);
+        cs=t.cosec(degree);
+        se=t.sec(degree);
+        ct=t.cot(degree);
+        System.out.println("The value of sin of the angle in Radians is: "+si);
+        System.out.println("The value of cos of the angle in Radians is: "+co);
+        System.out.println("The value of tan of the angle in Radians is: "+ta);
+        System.out.println("The value of cosec of the angle in Radians is: "+cs);
+        System.out.println("The value of sec of the angle in Radians is: "+se);
+        System.out.println("The value of cot of the angle in Radians is: "+ct);
+    }
+}
+
+exp : 06
+
+import java.util.Scanner;
+public class Array {
+   public static void main(String[] args)
+   {
+    int i,j;
+    int A [] []  = new int [3] [3];
+    Scanner s = new Scanner(System.in);
+    System.out.println("Enter the elements of the Array");
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+            A[i][j]=s.nextInt();
+        }
+    }
+    System.out.println("The elements entered in the array are ");
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+    System.out.println(A[i][j]);
+        }
+   } 
+}
+}
+
+exp : 07
+import java.util.Scanner;
+public class Test
+{
+public static void main(String[] arggs)
+{
+    StringBuffer sb = new StringBuffer("I am");
+    sb.insert(4,"Ironbat");
+    System.out.println(sb);
+    sb.append("ironman" );
+    System.out.println(sb);
+    sb.reverse();
+    System.out.println(sb);
+}
+
+}
+
+exp : 08
+import java.util.Scanner;
+class Motorvehicle
+{
+    String modelname;
+    String modelno;
+    float modelprice;
+    public Motorvehicle(String mname,String mno,float mprice)
+    {
+
+        this.modelname=mname;
+        this.modelno=mno;
+        this.modelprice=mprice;
+    }
+    public void display()
+    {
+        System.out.println("The Modelname is :"+modelname);
+        System.out.println("The Modelnumber is :"+modelno);
+        System.out.println("The Modelprice is :"+modelprice);
+    }
+}
+public class Car extends Motorvehicle 
+{
+    int discountrate;
+  
+    public Car(String mname,String mno,float mprice,int dr)
+    {
+        super(mname,mno,mprice);
+        discountrate=dr;
+    }
+    public void display()
+    {
+        super.display();
+        System.out.println("the Discountrate is "+discountrate);
+    }
+    public void discount()
+    {
+        float fp;
+        fp=modelprice-((discountrate*modelprice)/100);
+        System.out.println("The Final price is :"+fp);
+    }
+    public static void main(String[] args)
+    {
+     
+        Scanner s = new Scanner(System.in);
+        System.out.println("Enter the Name of the model it's model no , it' market rate and it's discontrate");
+      
+       Car c = new Car("Aditya","Mhco042",320000,70);
+        c.display();
+        c.discount();
+    }
+    
+}
+exp : 10
+abstract class Shape
+{
+    abstract void noofsides();
+    
+}
+class Triangle extends Shape
+{
+public void noofsides()
+{
+    System.out.println("Triangle has 3 sides");
+}
+}
+public class Shapetype
+{
+public static void main(String[] args)
+{
+    Triangle t = new Triangle();
+    t.noofsides();
+}
+}
+
+exp 11:
+// super keyword
+class Employee
+{
+    int wt=8;
+}
+public class Clerk extends Employee
+{
+    String name;
+int wt;
+    void function(String n)
+    {
+        this.name=n;
+       this.wt=super.wt;
+       System.out.println(name);
+       System.out.println(wt);
+    }
+    public static void main(String[] args)
+    {
+        Clerk c = new Clerk();
+        c.function("Aditya");
+    }
+}
+/// final keyword
+public class Clerk 
+{
+ final int k=69;
+ public void method()
+ {
+    System.out.print(k);
+ }
+ public static void main(String[] args)
+ {
+    Clerk c= new Clerk();
+    c.method();
+ }
+}
+
+exp : 12
+
+public Exception
+{
+ public static void main(String[] args)
+ {
+    try
+    {
+int i=5/0;
+    }
+    catch(ArithmeticException e)
+    {
+        System.out.println(e.getMessage());
+        System.out.print(" This is finally bloced");
+    }
+ }
+} 
+exp 14:
+import java.util.Scanner;
+class Multithreading extends Thread
+{
+    public void run()
+    {
+try 
+{
+ System.out.println("Thread "+Thread.currentThread().getId()+" is running");   
+}
+ catch (Exception e)
+ {
+    System.out.println("Exception is found");
+}
+}
+}
+public class Multithread
+{
+    public static void main(String[] args)
+    {
+    int i;
+    int n;
+    Scanner s=new Scanner(System.in);
+    System.out.println("Enter the valu of n");
+    n=s.nextInt();
+   for(i=0;i<n;i++)
+   {
+    Multithreading object = new Multithreading();
+    object.start();
+   }
+}
+}
+
