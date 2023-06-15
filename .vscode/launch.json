@@ -1,0 +1,45 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Customexception",
+      "request": "launch",
+      "mainClass": "Customexception",
+      "projectName": "javaprogrammes_7d3a325"
+    },
+    {
+      "type": "java",
+      "name": "Armstrong",
+      "request": "launch",
+      "mainClass": "Armstrong",
+      "projectName": "javaprogrammes_7d3a325"
+    },
+    {
+      "type": "java",
+      "name": "Constructors",
+      "request": "launch",
+      "mainClass": "Constructors",
+      "projectName": "javaprogrammes_7d3a325"
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": "c:/Users/Aditya/Desktop/Programing files all/javaprogrammes",
+      "program": "c:/Users/Aditya/Desktop/Programing files all/javaprogrammes/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}
