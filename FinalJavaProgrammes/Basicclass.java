@@ -1,4 +1,4 @@
-public class basicclass
+public class Basicclass
 {
     String name;
     String grno;
@@ -19,7 +19,7 @@ public class basicclass
     }
     public static void main(String[] args)
     {
-        Student s = new Student();
+        Basicclass s = new Basicclass();
         s.name="Aditya";
         s.grno="2021FHCO042";
         s.rollno=54;
