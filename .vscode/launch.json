@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Department$Student",
+      "request": "launch",
+      "mainClass": "Department$Student",
+      "projectName": "javaprogrammes_7d3a325"
+    },
+    {
+      "type": "java",
       "name": "Customexception",
       "request": "launch",
       "mainClass": "Customexception",
